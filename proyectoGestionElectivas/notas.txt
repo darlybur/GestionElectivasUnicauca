@@ -1,0 +1,17 @@
+composer create-project --prefer-dist laravel/laravel mi-proyecto // crear un proyecto
+
+php artisan serve //crear un servidor de desarrollo
+
+El directorio public contiene imágenes, archivos CSS y de Javascript que será públicos para los usuarios y visitantes de la aplicación
+
+En web.php se definen las rutas para la web y en api.php las rutas para crear APIs para la aplicación.
+
+php artisan make:controller UserController // crear un controlador
+
+Route::get('/usuarios', 'UserController@index') // crear una ruta a un método de controlador
+
+php artisan make:model Electiva -c -m // crear el modelo y el controlador
+
+composer dump-autoload // actualizar
+
+php artisan migrate// crear la migración

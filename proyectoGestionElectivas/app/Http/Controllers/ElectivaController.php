@@ -99,7 +99,7 @@ class ElectivaController extends Controller
         }
         catch (Exception $e)
         {
-            $mensaje='error, al eliminar la electiva con el codigo '.$data['codigo'];
+            $mensaje='error, al eliminar la electiva con el codigo '.$codigo;
             session()->flash('mensajeDeEliminacionErronea',  $mensaje);
         }
 

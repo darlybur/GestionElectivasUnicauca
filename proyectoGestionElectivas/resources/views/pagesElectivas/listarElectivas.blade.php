@@ -40,12 +40,15 @@
             </strong>
         </div>
     @endif
-    <table class="table">
+    <table class="table table-responsive">
         <thead class="thead-dark">
         <tr>
             <th scope="col">Codigo</th>
             <th scope="col">Nombre</th>
             <th scope="col">Cupo</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+
         </tr>
         </thead>
         <tbody>

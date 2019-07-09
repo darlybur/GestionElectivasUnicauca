@@ -2,21 +2,27 @@
 <html>
 <head>
     @include('includes.head')
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
 </head>
 <body>
-<div class="container">
 
-    <header class="row">
+
+<div class="container">
+        <div id="antorcha"></div>
+        <div id="bandera"></div>
+        <a href="http://www.unicauca.edu.co/" id="logoU"></a>
+
+    <header class="header">
         @include('includes.header')
     </header>
 
-    <div id="main" class="row">
+    <div id="main" class="row escudo">
 
         @yield('content')
 
     </div>
 
-    <footer class="row">
+    <footer class="footer">
         @include('includes.footer')
     </footer>
 

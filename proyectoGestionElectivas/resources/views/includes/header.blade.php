@@ -7,18 +7,18 @@
         </button>
     </div>
     <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-left">
+        <!--<ul class="nav navbar-nav navbar-left">
             <li><a href="#">Left</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-center">
+        </ul>-->
+        <ul class="col-sm-12 col-md-6 col-lg-12 nav navbar-nav navbar-left ">
             <li><a href="/">Home</a></li>
             <li><a href="/registrarElectiva">Registrar electiva</a></li>
             <li><a href="/listarElectivas">Listar electivas</a></li>
             <li><a href="/about">Acerca de nosotros</a></li>
             <li><a href="/contact">Contactanos</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <!--<ul class="nav navbar-nav navbar-right">
             <li><a href="#">Right</a></li>
-        </ul>
+        </ul>-->
     </div>
 </nav>
