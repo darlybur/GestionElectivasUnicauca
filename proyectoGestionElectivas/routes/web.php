@@ -54,6 +54,7 @@ Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 */
 //Rutas Login
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -64,3 +65,5 @@ Auth::routes(['register' =>true]);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+>>>>>>> 50cdede30d199f655ce85a2c0dc1dbe1fa81c213
