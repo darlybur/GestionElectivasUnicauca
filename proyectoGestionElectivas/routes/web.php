@@ -51,3 +51,6 @@ Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElect
 Route::get('export', 'CargarDatosController@export')->name('export');
 Route::get('importExportView', 'CargarDatosController@importExportView');
 Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
