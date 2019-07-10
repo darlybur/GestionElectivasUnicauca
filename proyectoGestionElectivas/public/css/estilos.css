@@ -25,19 +25,34 @@ h3, h5 {
     top: 0;
     width: 251px;
 }
-.escudo
+
+.table
 {
-}
-#main
-{
-    margin: 15px;
+
+    margin-right: 0px;
     color:#F6E9CF;
 }
-
-.row
+.tribu
 {
-    color: rgb(5, 5, 5);
+    color:#F6E9CF;
+    text-align: center;
+    font-size: 50px;
 }
+
+.contenido {
+
+    display: inline-block;
+    text-align: center; /* requerido para volver a alinear texto izquierda */
+}
+.contenedor {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; /* requerido para alineación horizontal */
+}
+
+
+
+
 
 .footer
 {

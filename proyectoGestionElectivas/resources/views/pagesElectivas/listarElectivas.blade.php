@@ -1,7 +1,6 @@
 @extends('layouts.default')
 @section('content')
-@section('content')
-
+<div id="contenedorMensajes">
     @if (session('mensajeDeEliminacionExitosa'))
         <div class="flash-message">
             <div class="alert alert-success">
@@ -40,6 +39,8 @@
             </strong>
         </div>
     @endif
+    </div>
+
     <table class="table table-responsive">
         <thead class="thead-dark">
         <tr>
@@ -69,4 +70,5 @@
         @endforeach
         </tbody>
     </table>
+
 @endsection

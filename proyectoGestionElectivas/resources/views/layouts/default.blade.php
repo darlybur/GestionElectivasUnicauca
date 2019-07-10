@@ -16,7 +16,7 @@
         @include('includes.header')
     </header>
 
-    <div id="main" class="row escudo">
+    <div>
 
         @yield('content')
 

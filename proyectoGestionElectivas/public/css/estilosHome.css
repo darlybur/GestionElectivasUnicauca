@@ -1,0 +1,75 @@
+
+.service-item {
+    cursor: pointer;
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.7s;
+    box-shadow: 0px 0px 15px #cdcdcd;
+}
+
+.service-item:hover {
+    background-color: #a2cf8d;
+}
+
+.service-item h4 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.service-item:hover h4 {
+    color: #fff;
+}
+
+.service-item:hover p {
+    color: #fff;
+}
+
+.first-service .icon {
+    background-image: url(../img/carreras.png);
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+}
+
+.first-service:hover .icon {
+    background-image: url(../img/carreras.png);
+    height: 64px;
+    width: 64px;
+}
+
+.second-service .icon {
+    background-image: url(../img/subir.png);
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+}
+
+.second-service:hover .icon {
+    background-image: url(../img/subir.png);
+}
+
+.third-service .icon {
+    background-image: url(../img/calendario.png);
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+}
+
+.third-service:hover .icon {
+    background-image: url(../img/calendario.png);
+}
+
+.fourth-service .icon {
+    background-image: url(../img/trabajo-en-equipo.png);
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+}
+
+.fourth-service:hover .icon {
+    background-image: url(../img/trabajo-en-equipo.png);
+}

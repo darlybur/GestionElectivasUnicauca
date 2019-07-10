@@ -1,6 +1,7 @@
 @extends('layouts.default')
 @section('content')
-<div class="container">
+
+   <div id="contenedorMensajes">
     @if (session('mensajeDeRegistroExitoso'))
             <div class="flash-message">
                 <div class="alert alert-success">
@@ -20,6 +21,8 @@
                 </strong>
             </div>
         @endif
+        </div>
+    <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
