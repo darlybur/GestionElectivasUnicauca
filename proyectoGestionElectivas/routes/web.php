@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cargarElectivas', function () {
+/*Route::get('/cargarElectivas', function () {
     return view('pagesElectivas/cargarElectivas');
 });
 
@@ -45,9 +45,22 @@ Route::delete('/electiva/eliminar/{codigo}', 'electivaController@eliminarElectiv
 
 Route::get('/electiva/vistaActualizarElectiva/{codigo}', 'electivaController@actualizarElectivaVista');
 
-Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');
+Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');*/
 
 /** Rutas para importar y exportar archivos excel */
-Route::get('export', 'CargarDatosController@export')->name('export');
+/*Route::get('export', 'CargarDatosController@export')->name('export');
 Route::get('importExportView', 'CargarDatosController@importExportView');
 Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+*/
+//Rutas Login
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes(['register' =>true]);
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

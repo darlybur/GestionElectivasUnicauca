@@ -505,3 +505,19 @@ body{
 
 	position: fixed; height: 112px; width: 31px; overflow: hidden; z-index: 99997; cursor: pointer; margin: 0px; opacity: 1; bottom: auto; right: auto; left: 0px; top: 336px;
 }
+
+/******************************************************************/
+/***** LOGIN *******/
+
+.formulario input{
+    background-color: aliceblue;
+    height: 42px;
+    font-size: 18px;
+    border:0;
+    padding-left: 54px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px blue, 0px 0px 10px white;
+}
+.nav-item{
+	
+}
