@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/cargarElectivas', function () {
+    return view('pagesElectivas/cargarElectivas');
+});
+
 Route::get('/', 'indexController@index');
 
 Route::get('/registrarElectiva', function () {
@@ -42,3 +46,8 @@ Route::delete('/electiva/eliminar/{codigo}', 'electivaController@eliminarElectiv
 Route::get('/electiva/vistaActualizarElectiva/{codigo}', 'electivaController@actualizarElectivaVista');
 
 Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');
+
+/** Rutas para importar y exportar archivos excel */
+Route::get('export', 'CargarDatosController@export')->name('export');
+Route::get('importExportView', 'CargarDatosController@importExportView');
+Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');

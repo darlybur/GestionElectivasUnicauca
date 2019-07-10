@@ -11,6 +11,4 @@ class indexController extends Controller
     {
         return view('pages/home');
     }
-
-
 }

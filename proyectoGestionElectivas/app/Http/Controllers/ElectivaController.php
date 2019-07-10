@@ -15,7 +15,6 @@ class ElectivaController extends Controller
 
     public function registrarElectiva()
     {
-
         $data= request()->all();
 
         try {
@@ -42,10 +41,7 @@ class ElectivaController extends Controller
             session()->flash('mensajeDeRegistroError',  $mensaje);
         }
 
-
-
         return view('pagesElectivas/registrarElectivas');
-
     }
 
     public function actualizarElectivaVista($codigo)
@@ -53,7 +49,6 @@ class ElectivaController extends Controller
         $electiva = Electiva::findOrFail($codigo);
 
         return view('pagesElectivas/editarElectiva', compact('electiva',$electiva));
-
     }
 
     public function listarElectivas()
