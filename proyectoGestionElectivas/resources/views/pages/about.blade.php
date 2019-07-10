@@ -1,12 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <div>
-        <div></div>
-        <div class = "tribu">
-                <img src="../images/aguila.png" alt = "logo equipo de desarrollo" width = "100">
-                Tribu Aguilas Creativas.
-                <img src="../images/aguila.png" alt = "logo equipo de desarrollo" width = "100">
-        </div>
+
         <table class="info table table-responsive">
                 <thead class="thead-dark">
                 <tr>
