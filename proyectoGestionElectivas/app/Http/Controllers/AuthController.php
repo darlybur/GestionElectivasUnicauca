@@ -39,16 +39,16 @@ class AuthController extends Controller
         //echo $hashedPassword;
 
         // Verificamos los datos
-        if (Auth::attempt($data, true)) // Como segundo parámetro pasámos el checkbox para sabes si queremos recordar la contraseña
+        if (Auth::attempt($data, false)) // Como segundo parámetro pasámos el checkbox para sabes si queremos recordar la contraseña
         {
 
             // Si nuestros datos son correctos mostramos la página de inicio
-            return view('pages/home');
+            return view('pagesElectivas/login2');
         }
-        echo 'no encontrado';
+        //echo 'no encontrado';
 
-        return view('pagesElectivas/login2');
-
+       
+        return view('pages/home');
 
     }
 
