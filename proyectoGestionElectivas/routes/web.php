@@ -55,6 +55,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/** Rutas para cargar archivo de los salones*/
+
+Route::get('/import', 'TestController@import');
+
 
 //Rutas Login
 //Route::get('/home', 'HomeController@index')->name('home');

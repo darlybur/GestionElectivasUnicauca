@@ -1,0 +1,94 @@
+/*==============================================================*/
+/* DBMS name:      Sybase SQL Anywhere 12                       */
+/* Created on:     03/08/2019 10:57:13 a. m.                    */
+/*==============================================================*/
+
+drop table if exists ELECTIVA;
+
+drop table if exists FANJAVOTADA;
+
+drop table if exists FRAJADISPONIBLESALON;
+
+drop table if exists SALON;
+
+drop table if exists USUARIO;
+
+/*==============================================================*/
+/* Table: ELECTIVA                                              */
+/*==============================================================*/
+create table ELECTIVA 
+(
+   CODIGO               varchar(1)                     not null,
+   NOMBRE               varchar(1)                     null,
+   CUPO                 integer                        not null,
+   constraint PK_ELECTIVA primary key clustered (CODIGO)
+);
+
+/*==============================================================*/
+/* Table: FANJAVOTADA                                           */
+/*==============================================================*/
+create table FANJAVOTADA 
+(
+   CODIGO               varchar(1)                     null,
+   CORREOUSUARIO        varchar(1)                     null,
+   IDFRANJA             integer                        null,
+   NUMEROFRANJA         integer                        null,
+   ROL                  varchar(80)                    null
+);
+
+/*==============================================================*/
+/* Table: FRAJADISPONIBLESALON                                  */
+/*==============================================================*/
+create table FRAJADISPONIBLESALON 
+(
+   IDFRANJA             integer                        not null,
+   NUMEROSALON          varchar(80)                    null,
+   NUMEROFRANJA         varchar(10)                    null,
+   constraint PK_FRAJADISPONIBLESALON primary key clustered (IDFRANJA)
+);
+
+/*==============================================================*/
+/* Table: SALON                                                 */
+/*==============================================================*/
+create table SALON 
+(
+   NUMEROSALON          varchar(80)                    not null,
+   DESCRIPCIONSALON     varchar(1200)                  null,
+   constraint PK_SALON primary key clustered (NUMEROSALON)
+);
+
+/*==============================================================*/
+/* Table: USUARIO                                               */
+/*==============================================================*/
+create table USUARIO 
+(
+   CORREOUSUARIO        varchar(1)                     not null,
+   CONTRASENIA          varchar(80)                    null,
+   ROL                  varchar(80)                    null,
+   constraint PK_USUARIO primary key clustered (CORREOUSUARIO)
+);
+
+alter table FANJAVOTADA
+   add constraint FK_FANJAVOT_REFERENCE_USUARIO foreign key (CORREOUSUARIO)
+      references USUARIO (CORREOUSUARIO)
+      on update restrict
+      on delete restrict;
+
+alter table FANJAVOTADA
+   add constraint FK_FANJAVOT_REFERENCE_FRAJADIS foreign key (IDFRANJA)
+      references FRAJADISPONIBLESALON (IDFRANJA)
+      on update restrict
+      on delete restrict;
+
+alter table FANJAVOTADA
+   add constraint FK_FANJAVOT_REFERENCE_ELECTIVA foreign key (CODIGO)
+      references ELECTIVA (CODIGO)
+      on update restrict
+      on delete restrict;
+
+alter table FRAJADISPONIBLESALON
+   add constraint FK_FRAJADIS_REFERENCE_SALON foreign key (NUMEROSALON)
+      references SALON (NUMEROSALON)
+      on update restrict
+      on delete restrict;
+
