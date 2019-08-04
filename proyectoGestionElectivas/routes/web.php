@@ -19,7 +19,10 @@ Route::get('/cargarElectivas', function () {
     return view('pagesElectivas/cargarElectivas');
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c039dbb9724195cbdcea03f41b4ff02d1695a8de
 Route::get('/', 'indexController@index');
 
 Route::get('/registrarElectiva', function () {
@@ -36,6 +39,11 @@ Route::get('/contact', function () {
     return view('pages/contact');
 });
 
+Route::get('/gestionHorarios', function () {
+    return view('pagesElectivas/seleccionHorario');
+});
+
+
 
 
 Route::get('/electiva/vistaRegistrarElectiva', 'electivaController@registrarElectivaVista');
@@ -46,6 +54,7 @@ Route::delete('/electiva/eliminar/{codigo}', 'electivaController@eliminarElectiv
 
 Route::get('/electiva/vistaActualizarElectiva/{codigo}', 'electivaController@actualizarElectivaVista');
 
+<<<<<<< HEAD
 Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');
 
 /** Rutas para importar y exportar archivos excel */
@@ -75,9 +84,46 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /* Auth::routes(['register' =>true]);
 
+=======
+Route::post('/electiva/actualizar/{codigo}', 'electivaControllerkj@actualizarElectiva');
+
+
+
+Route::post('/horario/registrarHorarioDocente/', 'HorarioController@registrarHorarioSalon');
+
+Route::post('/horario/registrarHorarioEstudiante', 'HorarioController@registrarHorarioEstudiante');
+
+Route::post('/horario/irVistaRegistrarHorarioEstudiante/', 'HorarioController@mostrarVistaHorarioEstudiante');
+
+
+/** Rutas para mostrar la vista para establecer los horarios del docente y estudiante */
+
+Route::get('/electiva/vistaRegistrarHorarioDocente', 'HorarioController@mostrarVistaHorarioDocente');
+
+Route::get('/electiva/vistaRegistrarHorarioEstudiante', 'HorarioController@mostrarVistaElectivasASeleccionarEstudiante');
+
+/** Rutas para importar y exportar archivos excel */
+Route::get('export', 'CargarDatosController@export')->name('export');
+Route::get('importExportView', 'CargarDatosController@importExportView');
+Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
+
+
+Route::get('login2', 'AuthController@showLogin'); // Mostrar login
+Route::post('/iniciarSesion', 'AuthController@postLogin'); // Verificar datos
+Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+
+/*Rutas privadas solo para usuarios autenticados*/
+Route::group(['before' => 'auth'], function()
+{
+    Route::get('/', 'indexController@index'); // Vista de inicio
+});
+>>>>>>> c039dbb9724195cbdcea03f41b4ff02d1695a8de
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 =======
 >>>>>>> 50cdede30d199f655ce85a2c0dc1dbe1fa81c213 */
+=======
+>>>>>>> c039dbb9724195cbdcea03f41b4ff02d1695a8de
