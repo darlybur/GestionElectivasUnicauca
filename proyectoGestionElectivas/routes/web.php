@@ -35,6 +35,11 @@ Route::get('/contact', function () {
     return view('pages/contact');
 });
 
+Route::get('/gestionHorarios', function () {
+    return view('pagesElectivas/seleccionHorario');
+});
+
+
 
 
 Route::get('/electiva/vistaRegistrarElectiva', 'electivaController@registrarElectivaVista');
@@ -45,7 +50,22 @@ Route::delete('/electiva/eliminar/{codigo}', 'electivaController@eliminarElectiv
 
 Route::get('/electiva/vistaActualizarElectiva/{codigo}', 'electivaController@actualizarElectivaVista');
 
-Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');
+Route::post('/electiva/actualizar/{codigo}', 'electivaControllerkj@actualizarElectiva');
+
+
+
+Route::post('/horario/registrarHorarioDocente/', 'HorarioController@registrarHorarioSalon');
+
+Route::post('/horario/registrarHorarioEstudiante', 'HorarioController@registrarHorarioEstudiante');
+
+Route::post('/horario/irVistaRegistrarHorarioEstudiante/', 'HorarioController@mostrarVistaHorarioEstudiante');
+
+
+/** Rutas para mostrar la vista para establecer los horarios del docente y estudiante */
+
+Route::get('/electiva/vistaRegistrarHorarioDocente', 'HorarioController@mostrarVistaHorarioDocente');
+
+Route::get('/electiva/vistaRegistrarHorarioEstudiante', 'HorarioController@mostrarVistaElectivasASeleccionarEstudiante');
 
 /** Rutas para importar y exportar archivos excel */
 Route::get('export', 'CargarDatosController@export')->name('export');
