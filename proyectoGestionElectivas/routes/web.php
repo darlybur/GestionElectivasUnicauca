@@ -57,12 +57,15 @@ Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
 Auth::routes();
 
 
-
 /** Rutas para importar y exportar usuarios excel */
 Route::get('exportU', 'CargarDatosUsuario@exportU')->name('exportU');
 Route::get('importExportViewU', 'CargarDatosUsuario@importExportViewU');
 Route::post('/cargarUsuarios', 'CargarDatosUsuario@importU')->name('importU');
 Auth::routes();
+
+
+/** Rutas para importar datos de los salones */
+Route::get('/#####', 'CargarDatosController@importSalones')->name('importSalones');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -70,11 +73,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Rutas Login
 //Route::get('/home', 'HomeController@index')->name('home');
 
-/*Auth::routes(['register' =>true]);
+/* Auth::routes(['register' =>true]);
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 =======
->>>>>>> 50cdede30d199f655ce85a2c0dc1dbe1fa81c213
+>>>>>>> 50cdede30d199f655ce85a2c0dc1dbe1fa81c213 */

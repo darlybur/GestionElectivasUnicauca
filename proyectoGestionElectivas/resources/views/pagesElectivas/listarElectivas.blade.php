@@ -49,7 +49,6 @@
             <th scope="col">Cupo</th>
             <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
-
         </tr>
         </thead>
         <tbody>
