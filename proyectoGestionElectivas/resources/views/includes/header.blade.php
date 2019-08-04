@@ -12,7 +12,7 @@
         </ul>-->
         <ul class="col-sm-12 col-md-6 col-lg-12 nav navbar-nav navbar-left ">
             <li><a href="/">Home</a></li>
-            <li><a href="/cargarElectivas">Cargar electivas</a></li>
+            <li><a href="/cargarElectivas">Cargar datos</a></li>
             <li><a href="/registrarElectiva">Registrar electiva</a></li>
             <li><a href="/listarElectivas">Listar electivas</a></li>
             <li><a href="/about">Acerca de nosotros</a></li>
