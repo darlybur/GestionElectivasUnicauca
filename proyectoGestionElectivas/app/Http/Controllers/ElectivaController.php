@@ -54,8 +54,18 @@ class ElectivaController extends Controller
     public function listarElectivas()
     {
         $electivas = Electiva::all();
+       
         return view('pagesElectivas/listarElectivas',compact('electivas',$electivas));
     }
+
+    public static function listarNombreElectivas()
+    {
+        $electivas = Electiva::all();
+        
+
+        return $electivas;
+    }
+
 
     public function actualizarElectiva($codigo)
     {
