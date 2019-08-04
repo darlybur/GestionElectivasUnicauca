@@ -18,6 +18,9 @@ Route::get('/', function () {
 Route::get('/cargarElectivas', function () {
     return view('pagesElectivas/cargarElectivas');
 });
+Route::get('/cargarUsuarios', function () {
+    return view('pagesElectivas/cargarUsuarios');
+});
 
 Route::get('/', 'indexController@index');
 
@@ -53,11 +56,15 @@ Route::get('importExportView', 'CargarDatosController@importExportView');
 Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
 Auth::routes();
 
+
+
+/** Rutas para importar y exportar usuarios excel */
+Route::get('exportU', 'CargarDatosUsuario@exportU')->name('exportU');
+Route::get('importExportViewU', 'CargarDatosUsuario@importExportViewU');
+Route::post('/cargarUsuarios', 'CargarDatosUsuario@importU')->name('importU');
+Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-/** Rutas para cargar archivo de los salones*/
-
-Route::get('/import', 'TestController@import');
 
 
 //Rutas Login

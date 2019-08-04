@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Exports\UsuariosExport;
-use App\Imports\UsuariosImport;
+use App\Exports\EstudiantesExport;
+use App\Imports\EstudiantesImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class CargarDatosUsuario extends Controller
@@ -23,7 +23,7 @@ class CargarDatosUsuario extends Controller
     */
     public function exportU() 
     {
-        return Excel::download(new UsuariosExport, 'usuarios.xlsx');
+        return Excel::download(new EstudiantesExport, 'usuarios.xlsx');
     }
    
     /**
@@ -31,8 +31,8 @@ class CargarDatosUsuario extends Controller
     */
     public function importU() 
     {
-        Excel::import(new UsuariosImport,request()->file('file'));
-        $mensaje='Datos de electivas cargados con éxito';
+        Excel::import(new EstudiantesImport,request()->file('file'));
+        $mensaje='Datos de usuarios cargados con éxito';
 
             session()->flash('mensajeDeCargarDatosExitoso',  $mensaje);
         return back();

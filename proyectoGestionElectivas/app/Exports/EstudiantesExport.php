@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ExportsU;
+namespace App\Exports;
 
 use App\Usuario;
 use Maatwebsite\Excel\Concerns\FromCollection;
