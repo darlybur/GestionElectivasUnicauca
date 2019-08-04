@@ -18,9 +18,7 @@ Route::get('/', function () {
 Route::get('/cargarElectivas', function () {
     return view('pagesElectivas/cargarElectivas');
 });
-Route::get('/cargarUsuarios', function () {
-    return view('pagesElectivas/cargarUsuarios');
-});
+
 
 Route::get('/', 'indexController@index');
 
@@ -65,7 +63,9 @@ Auth::routes();
 
 
 /** Rutas para importar datos de los salones */
-Route::get('/#####', 'CargarDatosController@importSalones')->name('importSalones');
+Route::get('importExportViewSalones', 'CargarSalonesController@importExportViewSalones');
+Route::post('/cargarSalones', 'CargarSalonesController@importSalones')->name('importSalones');
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

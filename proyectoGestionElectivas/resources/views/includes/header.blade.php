@@ -13,7 +13,6 @@
         <ul class="col-sm-12 col-md-6 col-lg-12 nav navbar-nav navbar-left ">
             <li><a href="/">Home</a></li>
 
-            <li><a href="/cargarUsuarios">Cargar electivas</a></li>
 
             <li><a href="/cargarElectivas">Cargar datos</a></li>
 

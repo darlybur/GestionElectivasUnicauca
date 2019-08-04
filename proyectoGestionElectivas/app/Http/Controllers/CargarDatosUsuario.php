@@ -32,7 +32,7 @@ class CargarDatosUsuario extends Controller
     public function importU() 
     {
         Excel::import(new EstudiantesImport,request()->file('file'));
-        $mensaje='Datos de usuarios cargados con éxito';
+        $mensaje='USUARIOS CARGADOS CON ÉXITO';
 
             session()->flash('mensajeDeCargarDatosExitoso',  $mensaje);
         return back();
