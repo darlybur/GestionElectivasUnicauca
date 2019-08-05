@@ -23,7 +23,6 @@ Route::get('/cargarElectivas', function () {
     return view('pagesElectivas/cargarElectivas');
 });
 
-Route::get('/', 'indexController@index');
 
 Route::get('/registrarElectiva', function () {
     return view('pagesElectivas/registrarElectivas');
@@ -74,9 +73,6 @@ Route::post('/cargarSalones', 'CargarSalonesController@importSalones')->name('im
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
 //Rutas Login
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -94,9 +90,7 @@ Route::post('/horario/irVistaRegistrarHorarioEstudiante/', 'HorarioController@mo
 
 
 /** Rutas para mostrar la vista para establecer los horarios del docente y estudiante */
-
 Route::get('/electiva/vistaRegistrarHorarioDocente', 'HorarioController@mostrarVistaHorarioDocente');
-
 Route::get('/electiva/vistaRegistrarHorarioEstudiante', 'HorarioController@mostrarVistaElectivasASeleccionarEstudiante');
 
 
@@ -110,6 +104,4 @@ Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
     Route::get('/', 'indexController@index'); // Vista de inicio
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');*/
+Auth::routes();*/
