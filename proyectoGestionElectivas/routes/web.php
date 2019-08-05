@@ -81,7 +81,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Rutas Login
 //Route::get('/home', 'HomeController@index')->name('home');
 
-/* Auth::routes(['register' =>true]);
+ Auth::routes(['register' =>true]);
 
 Route::post('/electiva/actualizar/{codigo}', 'electivaControllerkj@actualizarElectiva');
 
@@ -106,9 +106,9 @@ Route::get('importExportView', 'CargarDatosController@importExportView');
 Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
 
 
-//Route::get('login2', 'AuthController@showLogin'); // Mostrar login
-//Route::post('/iniciarSesion', 'AuthController@postLogin'); // Verificar datos
-//Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+Route::get('login2', 'AuthController@showLogin'); // Mostrar login
+Route::post('/iniciarSesion', 'AuthController@postLogin'); // Verificar datos
+Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
 
 /*Rutas privadas solo para usuarios autenticados*/
 /*Route::group(['before' => 'auth'], function()
