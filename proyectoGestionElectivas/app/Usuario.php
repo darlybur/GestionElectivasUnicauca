@@ -8,9 +8,9 @@ class Usuario extends Model
 {
 <<<<<<< HEAD
     protected $table = 'USUARIO';
-    protected $fillable = ['CORREOUSUARIO','CONTRASENIA','ROL'];
+    protected $fillable = ['email','password','ROL'];
     public $timestamps = false;
-    protected $primaryKey = 'CORREOUSUARIO';
+    protected $primaryKey = 'email';
 =======
     //
 >>>>>>> c039dbb9724195cbdcea03f41b4ff02d1695a8de

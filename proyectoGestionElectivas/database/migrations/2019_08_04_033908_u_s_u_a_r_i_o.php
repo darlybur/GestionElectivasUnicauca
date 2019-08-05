@@ -14,8 +14,8 @@ class USUARIO extends Migration
     public function up()
     {
         Schema::create('USUARIO', function (Blueprint $table) {
-            $table->string('CORREOUSUARIO')->unique();
-            $table->string('CONTRASENIA');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->String('ROL');
              });
     }
