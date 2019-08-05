@@ -13,12 +13,12 @@
                 @endif
             </div>
             <div class="card-body">
-                <form action="{{ route('importU') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('importSalones') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="file" name="file" class="form-control">
                     <br>
                     <button class="btn btn-primary">Importar datos</button>
-                    <a class="btn btn-danger" href="{{ route('exportU') }}">Descargar datos</a>
+                    <a class="btn btn-danger" href="{{ route('importSalones') }}">Descargar datos</a>
                 </form>
             </div>
         </div>

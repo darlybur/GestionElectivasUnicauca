@@ -57,4 +57,3 @@ class cargarSalonesController extends Controller
         return $salon->NUMEROSALON;
     }
 }
-

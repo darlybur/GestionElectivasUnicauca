@@ -13,10 +13,10 @@ class HorarioController extends Controller
 public function mostrarVistaHorarioDocente()
 {
 
-    $results = DB::select('select distinct frajadisponiblesalon.numerofranja
-                               from frajadisponiblesalon
-                               right join salon on
-                               frajadisponiblesalon.numerosalon = salon.numerosalon');
+    $results = DB::select('select distinct franja_disponible_salons.numerofranja
+                               from franja_disponible_salons
+                               right join salons on
+                               franja_disponible_salons.numerosalon = salons.numerosalon');
                                $arrayHorariosSalonesDisponible = array();
         foreach($results as $contenido)
         {
@@ -108,10 +108,10 @@ public function registrarHorarioSalon()
         session()->flash('mensajeDeRegistroError',  $mensaje);
     }
 
-        $results = DB::select('select distinct frajadisponiblesalon.numerofranja
-        from frajadisponiblesalon
-        right join salon on
-        frajadisponiblesalon.numerosalon = salon.numerosalon');
+        $results = DB::select('select distinct franja_disponible_salons.numerofranja
+        from franja_disponible_salons
+        right join salons on
+        franja_disponible_salons.numerosalon = salons.numerosalon');
         $arrayHorariosSalonesDisponible = array();
         foreach($results as $contenido)
         {

@@ -1,5 +1,7 @@
 @extends('layouts.default')
 @section('content')
+
+
     <table class="table table-responsive">
         <thead class="thead-dark">
             
@@ -133,4 +135,6 @@
             </tr>
         </tbody>
     </table>
+
+    
 @stop
