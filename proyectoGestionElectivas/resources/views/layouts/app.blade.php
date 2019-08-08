@@ -17,17 +17,29 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+<<<<<<< HEAD
+<<<<<<< HEAD
     <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
+=======
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+>>>>>>> 50cdede30d199f655ce85a2c0dc1dbe1fa81c213
+=======
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+>>>>>>> c039dbb9724195cbdcea03f41b4ff02d1695a8de
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <div id="antorcha"></div>
                     <div id="bandera"></div>
                     <a href="http://www.unicauca.edu.co/" id="logoU"></a>
+=======
+>>>>>>> 50cdede30d199f655ce85a2c0dc1dbe1fa81c213
+=======
+>>>>>>> c039dbb9724195cbdcea03f41b4ff02d1695a8de
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>

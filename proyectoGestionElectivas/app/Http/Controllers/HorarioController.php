@@ -13,15 +13,15 @@ class HorarioController extends Controller
 public function mostrarVistaHorarioDocente()
 {
 
-    $results = DB::select('select distinct franja_disponible_salons.numerofranja
+    $results = DB::select('select distinct franja_disponible_salons.NUMEROFRANJA
                                from franja_disponible_salons
                                right join salons on
-                               franja_disponible_salons.numerosalon = salons.numerosalon');
+                               franja_disponible_salons.NUMEROSALON = salons.NUMEROSALON');
                                $arrayHorariosSalonesDisponible = array();
         foreach($results as $contenido)
         {
 
-                array_push($arrayHorariosSalonesDisponible, $contenido->numerofranja);
+                array_push($arrayHorariosSalonesDisponible, $contenido->NUMEROFRANJA);
 
         }
 
@@ -35,7 +35,7 @@ public function validarVotacion($correo)
     $results = DB::select('select count(*)
                             as resultado
                             from franjavotada
-                            where correousuario = :correo',['correo'=>$correo]);
+                            where CORREOUSUARIO = :correo',['correo'=>$correo]);
     return $results;
 }
 
@@ -45,14 +45,14 @@ public function mostrarVistaHorarioEstudiante()
 
     $codigoElectiva=request()->input('codigoElectiva');
     request()->session()->put('codigoElectiva', $codigoElectiva);
-    $results = DB::select('select numerofranja
+    $results = DB::select('select NUMEROFRANJA
     from franjavotada
-    where codigoelectiva = :codigo',['codigo'=>$codigoElectiva]);
+    where CODIGOELECTIVA = :codigo',['codigo'=>$codigoElectiva]);
    $arrayHorariosDisponiblesDocente = array();
         foreach($results as $contenido)
         {
 
-                array_push($arrayHorariosDisponiblesDocente, $contenido->numerofranja);
+                array_push($arrayHorariosDisponiblesDocente, $contenido->NUMEROFRANJA);
 
         }
 
@@ -76,7 +76,7 @@ public function registrarHorarioSalon()
         if($cantidad>=2)
         {
         // $correoSesion = request()->session()->get("email");
-        $correoSesion='juan@unicauca.edu.co';
+        $correoSesion='albeiro@unicauca.edu.co';
         $codigoElectiva=request()->input('codigoElectiva');;
 
         echo $correoSesion;
@@ -108,15 +108,15 @@ public function registrarHorarioSalon()
         session()->flash('mensajeDeRegistroError',  $mensaje);
     }
 
-        $results = DB::select('select distinct franja_disponible_salons.numerofranja
+        $results = DB::select('select distinct franja_disponible_salons.NUMEROFRANJA
         from franja_disponible_salons
         right join salons on
-        franja_disponible_salons.numerosalon = salons.numerosalon');
+        franja_disponible_salons.NUMEROSALON = salons.NUMEROSALON');
         $arrayHorariosSalonesDisponible = array();
         foreach($results as $contenido)
         {
 
-        array_push($arrayHorariosSalonesDisponible, $contenido->numerofranja);
+        array_push($arrayHorariosSalonesDisponible, $contenido->NUMEROFRANJA);
 
         }
 
@@ -134,7 +134,7 @@ public function registrarHorarioSalon()
        if($cantidad>=2)
        {
             // $correoSesion = request()->session()->get("email");
-            $correoSesion='catalina@unicauca.edu.co';
+            $correoSesion='pangelica@unicauca.edu.co';
             $codigoElectiva= request()->session()->get('codigoElectiva');
 
             echo $correoSesion;

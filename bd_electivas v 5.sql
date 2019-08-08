@@ -47,20 +47,20 @@ INSERT INTO `electiva` (`codigo`, `nombre`, `cupo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `franja_disponible_salons`
+-- Estructura de tabla para la tabla `frajadisponiblesalon`
 --
 
-CREATE TABLE `franja_disponible_salons` (
+CREATE TABLE `frajadisponiblesalon` (
   `IDFRANJA` int(11) NOT NULL,
   `NUMEROSALON` varchar(80) DEFAULT NULL,
   `NUMEROFRANJA` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `franja_disponible_salons`
+-- Volcado de datos para la tabla `frajadisponiblesalon`
 --
 
-INSERT INTO `franja_disponible_salons` (`IDFRANJA`, `NUMEROSALON`, `NUMEROFRANJA`) VALUES
+INSERT INTO `frajadisponiblesalon` (`IDFRANJA`, `NUMEROSALON`, `NUMEROFRANJA`) VALUES
 (1, '332', 'L-7-9'),
 (2, 'sala2', 'L-9-11'),
 (3, 'sala1', 'L-7-9'),
@@ -134,19 +134,19 @@ INSERT INTO `franjavotada` (`IDFRANJA`, `CODIGOELECTIVA`, `CORREOUSUARIO`, `NUME
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `salons`
+-- Estructura de tabla para la tabla `salon`
 --
 
-CREATE TABLE `salons` (
+CREATE TABLE `salon` (
   `NUMEROSALON` varchar(80) NOT NULL,
   `DESCRIPCIONSALON` varchar(1200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `salons`
+-- Volcado de datos para la tabla `salon`
 --
 
-INSERT INTO `salons` (`NUMEROSALON`, `DESCRIPCIONSALON`) VALUES
+INSERT INTO `salon` (`NUMEROSALON`, `DESCRIPCIONSALON`) VALUES
 ('332', 'sala de computo'),
 ('sala1', 'sala de computo'),
 ('sala2', 'sala de computo'),
@@ -183,9 +183,9 @@ ALTER TABLE `electiva`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Indices de la tabla `franja_disponible_salons`
+-- Indices de la tabla `frajadisponiblesalon`
 --
-ALTER TABLE `franja_disponible_salons`
+ALTER TABLE `frajadisponiblesalon`
   ADD PRIMARY KEY (`IDFRANJA`),
   ADD KEY `FK_FRAJADIS_REFERENCE_SALON` (`NUMEROSALON`);
 
@@ -198,9 +198,9 @@ ALTER TABLE `franjavotada`
   ADD KEY `FK_FRANJAVO_REFERENCE_ELECTIVA` (`CODIGOELECTIVA`);
 
 --
--- Indices de la tabla `salons`
+-- Indices de la tabla `salon`
 --
-ALTER TABLE `salons`
+ALTER TABLE `salon`
   ADD PRIMARY KEY (`NUMEROSALON`);
 
 --
@@ -224,10 +224,10 @@ ALTER TABLE `franjavotada`
 --
 
 --
--- Filtros para la tabla `franja_disponible_salons`
+-- Filtros para la tabla `frajadisponiblesalon`
 --
-ALTER TABLE `franja_disponible_salons`
-  ADD CONSTRAINT `FK_FRAJADIS_REFERENCE_SALON` FOREIGN KEY (`NUMEROSALON`) REFERENCES `salons` (`NUMEROSALON`);
+ALTER TABLE `frajadisponiblesalon`
+  ADD CONSTRAINT `FK_FRAJADIS_REFERENCE_SALON` FOREIGN KEY (`NUMEROSALON`) REFERENCES `salon` (`NUMEROSALON`);
 
 --
 -- Filtros para la tabla `franjavotada`

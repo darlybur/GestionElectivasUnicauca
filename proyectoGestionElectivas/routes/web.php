@@ -14,14 +14,17 @@
 Route::get('/', function () {
     if(Auth::guest()){
         return view('pagesElectivas/login2');
-    }else {
+
+    }else{
         return view('home');
     }
+    
 });
 
 Route::get('/cargarElectivas', function () {
     return view('pagesElectivas/cargarElectivas');
 });
+
 
 
 Route::get('/registrarElectiva', function () {
@@ -44,7 +47,6 @@ Route::get('/gestionHorarios', function () {
 
 
 
-
 Route::get('/electiva/vistaRegistrarElectiva', 'electivaController@registrarElectivaVista');
 
 Route::post('/electiva/registrar', 'electivaController@registrarElectiva');
@@ -52,6 +54,7 @@ Route::post('/electiva/registrar', 'electivaController@registrarElectiva');
 Route::delete('/electiva/eliminar/{codigo}', 'electivaController@eliminarElectiva');
 
 Route::get('/electiva/vistaActualizarElectiva/{codigo}', 'electivaController@actualizarElectivaVista');
+
 
 Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');
 
@@ -61,16 +64,20 @@ Route::get('importExportView', 'CargarDatosController@importExportView');
 Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
 Auth::routes();
 
+
 /** Rutas para importar y exportar usuarios excel */
 Route::get('exportU', 'CargarDatosUsuario@exportU')->name('exportU');
 Route::get('importExportViewU', 'CargarDatosUsuario@importExportViewU');
 Route::post('/cargarUsuarios', 'CargarDatosUsuario@importU')->name('importU');
 Auth::routes();
 
+
 /** Rutas para importar datos de los salones */
 Route::get('importExportViewSalones', 'CargarSalonesController@importExportViewSalones');
 Route::post('/cargarSalones', 'CargarSalonesController@importSalones')->name('importSalones');
 Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
 //Rutas Login
@@ -78,7 +85,7 @@ Auth::routes();
 
  Auth::routes(['register' =>true]);
 
-Route::post('/electiva/actualizar/{codigo}', 'electivaControllerkj@actualizarElectiva');
+Route::post('/electiva/actualizar/{codigo}', 'electivaController@actualizarElectiva');
 
 
 
@@ -90,8 +97,15 @@ Route::post('/horario/irVistaRegistrarHorarioEstudiante/', 'HorarioController@mo
 
 
 /** Rutas para mostrar la vista para establecer los horarios del docente y estudiante */
+
 Route::get('/electiva/vistaRegistrarHorarioDocente', 'HorarioController@mostrarVistaHorarioDocente');
+
 Route::get('/electiva/vistaRegistrarHorarioEstudiante', 'HorarioController@mostrarVistaElectivasASeleccionarEstudiante');
+
+/** Rutas para importar y exportar archivos excel */
+Route::get('export', 'CargarDatosController@export')->name('export');
+Route::get('importExportView', 'CargarDatosController@importExportView');
+Route::post('/cargarElectivas', 'CargarDatosController@import')->name('import');
 
 
 Route::get('login2', 'AuthController@showLogin'); // Mostrar login
@@ -104,4 +118,7 @@ Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
     Route::get('/', 'indexController@index'); // Vista de inicio
 });
 
-Auth::routes();*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');*/

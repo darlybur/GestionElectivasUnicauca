@@ -15,8 +15,8 @@ class EstudiantesImport implements ToModel
     public function model(array $row)
     {
         return new Usuario([
-            'CORREOUSUARIO' => $row[0],
-            'CONTRASENIA' => $row[1],
+            'email' => $row[0],
+            'password' => $row[1],
             'ROL' => $row[2],
         ]);
     }

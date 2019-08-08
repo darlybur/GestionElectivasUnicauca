@@ -43,12 +43,13 @@ class AuthController extends Controller
         {
 
             // Si nuestros datos son correctos mostramos la página de inicio
+            
             return view('pagesElectivas/login2');
         }
         //echo 'no encontrado';
-
-       
         return view('pages/home');
+        
+
 
     }
 
